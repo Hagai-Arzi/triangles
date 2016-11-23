@@ -10,7 +10,7 @@ The use of each method is explained in the file.
 The tests are in the file spec/triangles_spec.rb
 
 ## Installation
-
+It needs RubyGems and bundler to be installed.
 After cloning, change to the root directory and run 'bundle install'.
 
 ## Running the program
