@@ -14,7 +14,8 @@ end
 # The input here is 3 seperated values - for a triangle.
 # The other function get an array, since they can be used in general
 # with bigger arrays.
-# uncomment the method you want to use.
+# Here we also check for negative or zero unpermitted input values.
+# Uncomment the method you want to use.
 def triangle_kind(s1, s2, s3)
   raise ArgumentError if [s1, s2, s3].any? { |n| n <= 0 }
 
@@ -26,8 +27,8 @@ end
 
 # This method is the less general method - it cannot fit to other
 # problems. However, if we have to categorize 1 milion of triangles
-# using a true compiler - this generates the smallest and fastest
-# machine code.
+# in a second using a true compiler - this simple code generates the
+# smallest and fastest machine code.
 def kind_for_machine_code(array)
   s1, s2, s3 = array
   if s1 == s2
@@ -41,7 +42,7 @@ def kind_for_machine_code(array)
   end
 end
 
-# The problem we have represent a general problem of finding repetitions
+# The problem we have represents a general problem of finding repetitions
 # of values in an array.
 # We can use hash, by using the input values as keys, and group them to
 # arrays contining these keys. for example"
@@ -52,8 +53,10 @@ def kind_using_hash(array)
 end
 
 # For mor general problems we want to know how many repetitions each value
-# have in the input array.
-# The following function return a hash like this:
+# have in the input array. We can use the former method, but
+# the following function return a hash with exactly what we need, using
+# less resources. It is a seperated function, because the result can be used
+# in different manners.
 # [1,3,3] => {1: 1, 3: 2}
 def repetitions(array)
   array.each_with_object(Hash.new(0)) { |s, hash| hash[s] += 1 }
@@ -68,8 +71,9 @@ end
 # We can use set to check how many different values we have.
 # for example - [1,3,3] will give us (1,3) and the count - 2
 # is the result.
-# This is the simplest method for triangles, and can be used for other
-# problems as well, but it is less generic then a hash.
+# This is the simplest lightest and most elegant method for triangles,
+# and can be used for other problems as well, but it is less generic then a hash,
+# since we doesn't know how many times each value is repeated.
 def kind_using_set(array)
   array.to_set.count
 end
