@@ -1,36 +1,24 @@
 # Triangles
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/triangles`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a project that calculate the kind of a triangle using it's three
+sides as an input.
 
-TODO: Delete this and the text above, and describe your gem
+It is implemented in the file lib/triangles.rb using four different methods.
+All of the methods should be commented except the one in use.
+The use of each method is explained in the file.
+
+The tests are in the file spec/triangles_spec.rb
 
 ## Installation
 
-Add this line to your application's Gemfile:
+After cloning, change to the root directory and run 'bundle install'.
 
-```ruby
-gem 'triangles'
-```
+## Running the program
 
-And then execute:
+Type 'bin/console'.
+When the console opens, call the function. For example:
+run(1,2,3)       # => Scalene
 
-    $ bundle
+## Running the tests
 
-Or install it yourself as:
-
-    $ gem install triangles
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/triangles.
-
+Type 'rspec'.
